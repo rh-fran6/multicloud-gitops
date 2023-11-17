@@ -5,7 +5,7 @@ clusterGroup:
   namespaces:
     - open-cluster-management
     - vault
-    - golang-external-secrets
+    # - golang-external-secrets
     - config-demo
     - hello-world
     - external-secrets-operator
@@ -67,11 +67,11 @@ clusterGroup:
       project: hub
       path: common/hashicorp-vault
 
-    golang-external-secrets:
-      name: golang-external-secrets
-      namespace: golang-external-secrets
-      project: hub
-      path: common/golang-external-secrets
+    # golang-external-secrets:
+    #   name: golang-external-secrets
+    #   namespace: golang-external-secrets
+    #   project: hub
+    #   path: common/golang-external-secrets
     
     external-secrets-operator:
       name: external-secrets-operator
