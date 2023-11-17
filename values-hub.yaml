@@ -7,7 +7,7 @@ clusterGroup:
     - vault
     - golang-external-secrets
     - config-demo
-    - hello-world
+    - hello-worldd
 
   subscriptions:
     acm:
