@@ -8,6 +8,7 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
+    - external-secrets-operator
 
   subscriptions:
     acm:
@@ -64,6 +65,12 @@ clusterGroup:
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
+      project: hub
+      path: common/golang-external-secrets
+    
+    external-secrets-operator:
+      name: external-secrets-operator
+      namespace: external-secrets-operator
       project: hub
       path: common/golang-external-secrets
 
