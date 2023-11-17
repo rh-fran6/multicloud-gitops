@@ -12,6 +12,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - golang-external-secrets
+    - external-secrets-operator
 
   subscriptions:
 
@@ -26,6 +27,12 @@ clusterGroup:
       namespace: golang-external-secrets
       project: eso
       path: common/golang-external-secrets
+    
+    external-secrets-operator:
+      name: external-secrets-operator
+      namespace: external-secrets-operator
+      project: eso
+      path: common/external-secrets-operator
 
     config-demo:
       name: config-demo
