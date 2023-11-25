@@ -69,6 +69,20 @@ clusterGroup:
       project: hub
       path: common/ansible-automation-platform/operator/overlays/stable-2.4
     
+    aap-hub-instance:
+      name: ansible-automation-platform
+      namespace: ansible-automation-platform
+      project: hub
+      kustomize: true
+      path: common/ansible-automation-platform/hub-instance/overlays/default
+    
+    aap-instance:
+      name: ansible-automation-platform
+      namespace: ansible-automation-platform
+      project: hub
+      kustomize: true
+      path: common/ansible-automation-platform/instance/overlays/default
+    
     external-secrets-operator:
       name: external-secrets-operator
       namespace: external-secrets-operator
