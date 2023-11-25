@@ -12,6 +12,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - external-secrets-operator
+    - aap
 
   subscriptions:
 
@@ -19,6 +20,7 @@ clusterGroup:
     - eso
     - config-demo
     - hello-world
+    - automation
 
   applications:
     
@@ -39,6 +41,20 @@ clusterGroup:
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
+    
+    aap-hub-instance:
+      name: ansible-automation-platform
+      namespace: aap
+      project: aap
+      kustomize: true
+      path: common/ansible-automation-platform/hub-instance/overlays/default
+    
+    aap-instance:
+      name: ansible-automation-platform
+      namespace: aap
+      project: aap
+      kustomize: true
+      path: common/ansible-automation-platform/instance/overlays/default
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
