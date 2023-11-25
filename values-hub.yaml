@@ -5,7 +5,6 @@ clusterGroup:
   namespaces:
     - open-cluster-management
     - vault
-    # - golang-external-secrets
     - config-demo
     - hello-world
     - external-secrets-operator
@@ -16,12 +15,7 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
-    
-    # eso:
-    #   name: external-secrets-operator
-    #   namespace: external-secrets-operator
-    #   channel: stable
-
+      
   projects:
     - hub
     - config-demo

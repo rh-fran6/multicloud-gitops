@@ -41,7 +41,7 @@
     unseal_keys: "{{ vault_init_json['unseal_keys_hex'] }}"
   when: vault_sealed
 
-# Already unsealed by line 33. This is where the unsealing of the leader happens
+## Already unsealed by line 33
 - name: Unseal leader
   kubernetes.core.k8s_exec:
     namespace: "{{ vault_ns }}"
