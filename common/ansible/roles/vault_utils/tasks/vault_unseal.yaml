@@ -41,7 +41,6 @@
     unseal_keys: "{{ vault_init_json['unseal_keys_hex'] }}"
   when: vault_sealed
 
-# Already unsealed by line 33. This is where the unsealing of the leader happens
 - name: Unseal leader
   kubernetes.core.k8s_exec:
     namespace: "{{ vault_ns }}"
@@ -70,7 +69,6 @@
     - vault_sealed
     - followers | length > 0
 
-## Raft join already takes care of unsealing
 - name: Unseal followers
   kubernetes.core.k8s_exec:
     namespace: "{{ vault_ns }}"
