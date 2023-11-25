@@ -12,7 +12,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - external-secrets-operator
-    - aap
+    - ansible-automation-platform
 
   subscriptions:
 
@@ -20,7 +20,7 @@ clusterGroup:
     - eso
     - config-demo
     - hello-world
-    - automation
+    - ansible-automation-platform
 
   applications:
     
@@ -44,15 +44,15 @@ clusterGroup:
     
     aap-hub-instance:
       name: ansible-automation-platform
-      namespace: aap
-      project: aap
+      namespace: ansible-automation-platform
+      project: ansible-automation-platform
       kustomize: true
       path: common/ansible-automation-platform/hub-instance/overlays/default
     
     aap-instance:
       name: ansible-automation-platform
-      namespace: aap
-      project: aap
+      namespace: ansible-automation-platform
+      project: ansible-automation-platform
       kustomize: true
       path: common/ansible-automation-platform/instance/overlays/default
 

@@ -8,7 +8,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - external-secrets-operator
-    - aap
+    - ansible-automation-platform
 
   subscriptions:
     acm:
@@ -64,7 +64,7 @@ clusterGroup:
     
     app:
       name: ansible-automation-platform
-      namespace: aap
+      namespace: ansible-automation-platform
       kustomize: true
       project: hub
       path: common/ansible-automation-platform/operator/overlays/stable-2.4
