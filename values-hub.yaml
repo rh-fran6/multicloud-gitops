@@ -8,7 +8,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - external-secrets-operator
-    # - ansible-automation-platform
+    - ansible-automation-platform
 
   subscriptions:
     acm:
@@ -67,12 +67,12 @@ clusterGroup:
       project: hub
       path: common/hashicorp-vault
       
-    # aap-instance:
-    #   name: ansible-automation-platform
-    #   namespace: aap
-    #   project: hub
-    #   kustomize: true
-    #   path: common/ansible-automation-platform/instance/overlays/default
+    aap-instance:
+      name: ansible-automation-platform
+      namespace: aap
+      project: hub
+      kustomize: true
+      path: common/ansible-automation-platform/overlays/default
     
     external-secrets-operator:
       name: external-secrets-operator
