@@ -39,6 +39,7 @@ clusterGroup:
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
+      
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
