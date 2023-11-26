@@ -9,6 +9,7 @@ clusterGroup:
     - hello-world
     - external-secrets-operator
     - aap
+    - ansible-automation-platform
 
   subscriptions:
     acm:
