@@ -8,8 +8,8 @@ clusterGroup:
     - config-demo
     - hello-world
     - external-secrets-operator
-    - aap
-    # - ansible-automation-platform
+    # - aap
+    - ansible-automation-platform
 
   subscriptions:
     acm:
@@ -17,6 +17,11 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.8
       #csv: advanced-cluster-management.v2.6.1
+
+    aap:
+      name: ansible-automation-controller
+      namespace: ansible-automation-platform
+      channel: stable-2.4
       
   projects:
     - hub
@@ -63,12 +68,12 @@ clusterGroup:
       project: hub
       path: common/hashicorp-vault
     
-    app:
-      name: ansible-automation-platform
-      namespace: aap
-      kustomize: true
-      project: hub
-      path: common/ansible-automation-platform/operator/overlays/stable-2.4
+    # app:
+    #   name: ansible-automation-platform
+    #   namespace: aap
+    #   kustomize: true
+    #   project: hub
+    #   path: common/ansible-automation-platform/operator/overlays/stable-2.4
     
     # aap-hub-instance:
     #   name: ansible-automation-platform
