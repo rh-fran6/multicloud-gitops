@@ -33,8 +33,9 @@ spec:
                   name: vault-secret-internal
                   namespace: postgresql
                 data:
-                  vault-secret-internal: '{{ `{{hub fromSecret "vault" "vault-secret-internal" "tls.crt" | base64dec hub}}` }}'
----
+                  # vault-secret-internal: '{{ `{{hub fromSecret "vault" "vault-secret-internal" "tls.crt" | base64dec hub}}` }}'
+                  vault: '{{ `{{ ( lookup "v1" "Secret" "vault" "vault-secret-internal") .data.tls\.crt ) \| base64dec }}` }}'
+--- 
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
