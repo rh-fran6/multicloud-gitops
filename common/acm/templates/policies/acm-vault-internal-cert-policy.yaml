@@ -30,10 +30,10 @@ spec:
                 apiVersion: v1
                 type: Opaque
                 metadata:
-                  name: vault-internal-cert
+                  name: vault-secret-internal
                   namespace: postgresql
                 data:
-                  hub-kube-root-ca.crt: '{{ `{{hub fromSecret "" "vault-secret-internal" "tls.crt" hub}}` }}'
+                  vault-secret-internal: '{{ `{{hub fromSecret "vault" "vault-secret-internal" "tls.crt" hub}}` }}'
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
