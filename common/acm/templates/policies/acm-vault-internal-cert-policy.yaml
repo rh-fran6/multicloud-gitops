@@ -1,6 +1,6 @@
 # This pushes out the HUB's Certificate Authorities on to the imported clusters
-{{ if .Values.clusterGroup.isHubCluster }}
----
+# {{ if .Values.clusterGroup.isHubCluster }}
+# ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
@@ -20,11 +20,11 @@ spec:
         spec:
           remediationAction: musthave
           severity: medium
-          # namespaceSelector:
-          #   include:
-          #     - default
+          namespaceSelector:
+            include:
+              - vault
           object-templates:
-            - complianceType: mustonlyhave
+            - complianceType: musthave
               objectDefinition:
                 kind: Secret
                 apiVersion: v1
@@ -32,8 +32,8 @@ spec:
                 metadata:
                   name: vault-secret-internal
                   namespace: postgresql
-                dataData:
-                  vault-secret-internal: '{{ `{{hub fromConfigMap "" "vault-internal" "tls.crt" | base64enc hub}}` }}'
+                data:
+                  vault-secret-internal: '{{ `{{hub fromSecret "vault" "vault-secret-internal" "tls.crt" hub}}` }}'
 --- 
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
@@ -66,5 +66,5 @@ spec:
         operator: In
         values:
           - 'true'
-{{ end }}
+# {{ end }}
 
