@@ -20,9 +20,9 @@ spec:
         spec:
           remediationAction: enforce
           severity: medium
-          namespaceSelector:
-            include:
-              - default
+          # namespaceSelector:
+          #   include:
+          #     - default
           object-templates:
             - complianceType: mustonlyhave
               objectDefinition:
