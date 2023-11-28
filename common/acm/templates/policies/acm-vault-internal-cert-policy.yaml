@@ -42,18 +42,18 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 placementRef:
-  name: acm-hub-ca-policy-placement
+  name: acm-hub-postgresql-policy-placement
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
-  - name: acm-hub-ca-policy
+  - name: acm-vault-internal-cert-policy
     kind: Policy
     apiGroup: policy.open-cluster-management.io
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: acm-hub-ca-policy-placement
+  name: acm-hub-postgre-policy-placement
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
