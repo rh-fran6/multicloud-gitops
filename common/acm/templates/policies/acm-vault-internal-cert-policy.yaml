@@ -16,9 +16,9 @@ spec:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: acm-hub-ca-config-policy
+          name: acm-hub-vault-internal-config-policy
         spec:
-          remediationAction: enforce
+          remediationAction: musthave
           severity: medium
           # namespaceSelector:
           #   include:
@@ -33,7 +33,7 @@ spec:
                   name: vault-secret-internal
                   namespace: postgresql
                 data:
-                  vault-secret-internal: '{{ `{{hub fromSecret "vault" "vault-secret-internal" "tls.crt" hub}}` }}'
+                  vault-secret-internal: '{{ `{{hub fromSecret "vault" "vault-secret-internal" "tls.crt" | base64dec hub}}` }}'
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
