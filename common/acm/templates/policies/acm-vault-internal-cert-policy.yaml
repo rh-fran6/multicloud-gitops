@@ -53,7 +53,7 @@ subjects:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: acm-hub-postgre-policy-placement
+  name: acm-hub-postgresql-policy-placement
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
