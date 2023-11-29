@@ -15,6 +15,6 @@ spec:
       name: postgres-db-secret
       key: password
   http:
-    tlsSecret: postgres-db-secret
+    tlsSecret: keycloak-cert
   hostname:
     hostname: keycloak.apps.dd-aro.eastus.aroapp.io
