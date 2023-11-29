@@ -10,7 +10,7 @@ clusterGroup:
     - external-secrets-operator
     - ansible-automation-platform
     - postgresql
-    - rhbk-sso
+    # - rhbk-sso
 
   subscriptions:
     acm:
