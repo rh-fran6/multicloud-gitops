@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   labels:
     operators.coreos.com/rhbk-operator.rhbk-sso: ""
-  name: rhbk-subscription
+  name: rhbk-operator
   namespace: rhbk-sso
 spec:
   channel: PATCH_ME
