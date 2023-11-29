@@ -11,5 +11,5 @@ patches:
         value: 'stable-v22'
     target:
       kind: Subscription
-      name: rhbk-subscription
+      name: rhbk-operator
       namespace: rhbk-sso
