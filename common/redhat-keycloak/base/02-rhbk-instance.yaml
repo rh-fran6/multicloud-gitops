@@ -7,7 +7,7 @@ spec:
   instances: 1
   db:
     vendor: postgres
-    host: postgres-db
+    host: postgresql.postgresql.svc.cluster.local
     usernameSecret:
       name: postgres-db-secret
       key: username
