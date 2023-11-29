@@ -96,11 +96,11 @@ clusterGroup:
       project: hello-world
       path: charts/all/hello-world
 
-    postgresql:
-      name: postgresql
-      namespace: postgresql
-      project: postgresql
-      path: charts/all/postgresql
+    # postgresql:
+    #   name: postgresql
+    #   namespace: postgresql
+    #   project: postgresql
+    #   path: charts/all/postgresql
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
