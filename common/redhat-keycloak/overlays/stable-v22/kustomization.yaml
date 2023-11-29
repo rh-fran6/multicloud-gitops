@@ -11,5 +11,5 @@ patches:
         value: 'stable-v22'
     target:
       kind: Subscription
-      name: rhbk-operator
-      namespace: keycloak
+      name: rhbk-subscription
+      namespace: rhbk-sso
