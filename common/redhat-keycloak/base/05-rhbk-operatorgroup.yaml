@@ -1,0 +1,10 @@
+
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: rhbk-operatorgroup
+  namespace: rhbk-sso
+spec:
+  targetNamespaces:
+  - rhbk-sso
+  upgradeStrategy: Default
