@@ -18,3 +18,8 @@ spec:
     tlsSecret: keycloak-cert
   hostname:
     hostname: keycloak.apps.dd-aro.eastus.aroapp.io
+
+# CERTSECRET=keycloak-cert
+# for i in $(oc get secret  -n openshift-ingress | grep ingress | awk '{print $1}'); oc extract secret/$i -n openshift-ingress
+# oc create secret tls $CERTSECRET --cert tls.crt --key tls.key
+# rm -rm tls.*
