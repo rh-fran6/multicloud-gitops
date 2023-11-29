@@ -1,0 +1,12 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: KeycloakRealmImport
+metadata:
+  name: ngc-entraid-realm
+  namespace: rhbk-sso
+spec:
+  keycloakCRName: rhbk-sso
+  realm:
+    id: ngc-keycloak-realm
+    realm: ngc-keycloak-realm
+    displayName: NGCRealm
+    enabled: true
