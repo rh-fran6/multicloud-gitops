@@ -9,6 +9,7 @@ clusterGroup:
     - hello-world
     - external-secrets-operator
     - ansible-automation-platform
+    - postgresql
 
   subscriptions:
     acm:
@@ -26,6 +27,7 @@ clusterGroup:
     - hub
     - config-demo
     - hello-world
+    - postgresql
 
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
@@ -91,6 +93,12 @@ clusterGroup:
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
+
+    postgresql:
+      name: postgresql
+      namespace: postgresql
+      project: postgresql
+      path: charts/all/postgresql
 
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm

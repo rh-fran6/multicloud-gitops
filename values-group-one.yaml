@@ -12,6 +12,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - external-secrets-operator
+    - postgresql
 
   subscriptions:
 
@@ -19,6 +20,7 @@ clusterGroup:
     - eso
     - config-demo
     - hello-world
+    - postgresql
 
   applications:
     
@@ -39,6 +41,12 @@ clusterGroup:
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
+
+    postgresql:
+      name: postgresql
+      namespace: postgresql
+      project: postgresql
+      path: charts/all/postgresql
       
 
   imperative:
